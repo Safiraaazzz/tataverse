@@ -1,11 +1,11 @@
 import { useState } from "react"
 import "./App.css"
 import cakeImage from "./cake.jpeg"
-import tataImage from "./Tata.jpeg"
-import bolaUbiImage from "./bola ubi.jpeg"
-import iceCreamImage from "./ice cream.jpeg"
-import greenTeaImage from "./green tea.jpeg"
-import nutribusImage from "./Nutribus.jpeg"
+import tataImage from "./tata.jpeg"
+import bolaUbiImage from "./bolaubi.jpeg"
+import iceCreamImage from "./icecream.jpeg"
+import greenTeaImage from "./greentea.jpeg"
+import nutribusImage from "./nutriboost.jpeg"
 
 function App() {
   const [page, setPage] = useState("home")
