@@ -1,0 +1,1704 @@
+/* =========================================
+   TATAVERSE
+   BLUE - PURPLE SPACE THEME
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+
+  color: #ffffff;
+
+  overflow-x: hidden;
+
+  background:
+    radial-gradient(
+      circle at 12% 18%,
+      rgba(255, 255, 255, 0.18),
+      transparent 22%
+    ),
+    radial-gradient(
+      circle at 88% 78%,
+      rgba(255, 255, 255, 0.14),
+      transparent 24%
+    ),
+    linear-gradient(
+      135deg,
+      #1db9e8 0%,
+      #39aee8 28%,
+      #6394e8 55%,
+      #927fe0 78%,
+      #c87fd4 100%
+    );
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.container {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 35px 45px;
+}
+
+
+/* =========================================
+   SPACE DECORATION
+========================================= */
+
+.space-decor {
+  position: fixed;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 50;
+
+  pointer-events: none;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   ASTRONAUT
+========================================= */
+
+.astronaut {
+  position: absolute;
+
+  top: 8%;
+  left: 7%;
+
+  font-size: 42px;
+
+  animation: astronautFloat 5s ease-in-out infinite;
+}
+
+@keyframes astronautFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-8deg);
+  }
+
+  50% {
+    transform: translateY(-15px) rotate(6deg);
+  }
+}
+
+
+/* =========================================
+   ROCKET
+========================================= */
+
+.rocket {
+  position: absolute;
+
+  top: 13%;
+  right: 8%;
+
+  font-size: 38px;
+
+  animation: rocketFloat 4s ease-in-out infinite;
+}
+
+@keyframes rocketFloat {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(25deg);
+  }
+
+  50% {
+    transform: translate(8px, -14px) rotate(34deg);
+  }
+}
+
+
+/* =========================================
+   PLANET
+========================================= */
+
+.planet {
+  position: absolute;
+
+  right: 8%;
+  bottom: 9%;
+
+  font-size: 48px;
+
+  animation: planetFloat 6s ease-in-out infinite;
+}
+
+@keyframes planetFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-13px) rotate(8deg);
+  }
+}
+
+
+/* =========================================
+   SHOOTING STAR
+========================================= */
+
+.shooting-star {
+  position: absolute;
+
+  width: 95px;
+  height: 3px;
+
+  top: 17%;
+  left: -130px;
+
+  border-radius: 999px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    rgba(255, 255, 255, 1)
+  );
+
+  box-shadow:
+    0 0 6px rgba(255, 255, 255, 0.9),
+    0 0 14px rgba(255, 255, 255, 0.6);
+
+  transform: rotate(-25deg);
+
+  animation: shootingStar 7s linear infinite;
+}
+
+@keyframes shootingStar {
+  0% {
+    left: -150px;
+    top: 12%;
+    opacity: 0;
+  }
+
+  8% {
+    opacity: 1;
+  }
+
+  35% {
+    left: 40%;
+    top: 32%;
+    opacity: 1;
+  }
+
+  45% {
+    left: 65%;
+    top: 46%;
+    opacity: 0;
+  }
+
+  100% {
+    left: 110%;
+    top: 70%;
+    opacity: 0;
+  }
+}
+
+
+/* =========================================
+   STARS
+========================================= */
+
+.stars {
+  position: fixed;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 45;
+
+  pointer-events: none;
+
+  overflow: hidden;
+}
+
+.stars span {
+  position: absolute;
+
+  display: block;
+
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 6px #ffffff,
+    0 0 12px rgba(255, 255, 255, 0.7);
+
+  animation: twinkle 2.8s ease-in-out infinite;
+}
+
+
+/* bintang 1 */
+
+.stars span:nth-child(1) {
+  top: 11%;
+  left: 18%;
+}
+
+
+/* bintang 2 */
+
+.stars span:nth-child(2) {
+  top: 28%;
+  left: 6%;
+
+  width: 3px;
+  height: 3px;
+
+  animation-delay: 0.5s;
+}
+
+
+/* bintang 3 */
+
+.stars span:nth-child(3) {
+  top: 9%;
+  right: 26%;
+
+  width: 5px;
+  height: 5px;
+
+  animation-delay: 1s;
+}
+
+
+/* bintang 4 */
+
+.stars span:nth-child(4) {
+  top: 37%;
+  right: 5%;
+
+  width: 3px;
+  height: 3px;
+
+  animation-delay: 1.6s;
+}
+
+
+/* bintang 5 */
+
+.stars span:nth-child(5) {
+  bottom: 19%;
+  left: 8%;
+
+  width: 5px;
+  height: 5px;
+
+  animation-delay: 0.8s;
+}
+
+
+/* bintang 6 */
+
+.stars span:nth-child(6) {
+  bottom: 9%;
+  left: 30%;
+
+  width: 3px;
+  height: 3px;
+
+  animation-delay: 1.8s;
+}
+
+
+/* bintang 7 */
+
+.stars span:nth-child(7) {
+  bottom: 23%;
+  right: 24%;
+
+  width: 4px;
+  height: 4px;
+
+  animation-delay: 1.2s;
+}
+
+
+/* bintang 8 */
+
+.stars span:nth-child(8) {
+  top: 58%;
+  right: 10%;
+
+  width: 3px;
+  height: 3px;
+
+  animation-delay: 2.1s;
+}
+
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: scale(0.7);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+}
+
+
+/* =========================================
+   MAIN PAGE GLASS
+========================================= */
+
+.page {
+  position: relative;
+
+  z-index: 10;
+
+  width: 100%;
+  max-width: 1080px;
+
+  min-height: 600px;
+
+  padding: 45px 55px;
+
+  border-radius: 28px;
+
+  background: rgba(255, 255, 255, 0.13);
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  box-shadow:
+    0 25px 60px rgba(46, 38, 120, 0.18),
+    inset 0 1px 1px rgba(255, 255, 255, 0.2);
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+
+/* =========================================
+   TEXT
+========================================= */
+
+h1,
+h2,
+h3,
+p {
+  color: #ffffff;
+}
+
+h1 {
+  font-size: 46px;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 1.3;
+}
+
+h3 {
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+button {
+  border: 1px solid rgba(255, 255, 255, 0.28);
+
+  outline: none;
+
+  padding: 11px 24px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.16);
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.26);
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(46, 38, 120, 0.16);
+}
+
+
+/* =========================================
+   HOME / WELCOME
+========================================= */
+
+.home-page {
+  min-height: 600px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  /*
+    Sedikit diturunkan dari titik tengah
+  */
+
+  padding-top: 105px;
+  padding-bottom: 45px;
+}
+
+.home-page h1 {
+  margin-bottom: 18px;
+}
+
+.typing-text {
+  margin-bottom: 28px;
+}
+
+.button-group {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 18px;
+}
+
+.no-btn {
+  transition: transform 0.15s ease;
+}
+
+
+/* =========================================
+   PASSWORD
+========================================= */
+
+.password-page {
+  min-height: 600px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  /*
+    Dibuat sedikit turun,
+    tapi tetap di tengah
+  */
+
+  padding-top: 100px;
+  padding-bottom: 40px;
+}
+
+.password-page h2 {
+  margin-bottom: 8px;
+}
+
+.password-page > p {
+  margin-bottom: 2px;
+}
+
+
+/* password input */
+
+.password-page input {
+  display: block;
+
+  width: 360px;
+  max-width: 75%;
+
+  height: 44px;
+
+  margin: 22px auto 12px;
+
+  padding: 10px 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  border-radius: 14px;
+
+  outline: none;
+
+  background: rgba(255, 255, 255, 0.82);
+
+  color: #4c477e;
+
+  text-align: center;
+
+  font-size: 15px;
+}
+
+.password-page input::placeholder {
+  color: rgba(80, 75, 120, 0.6);
+}
+
+.password-page button {
+  min-width: 220px;
+
+  margin-top: 7px;
+}
+
+.password-page .small-btn {
+  margin-top: 8px;
+}
+
+.error-text {
+  font-size: 13px;
+
+  margin: 2px 0 6px;
+
+  color: #fff4fa;
+}
+
+
+/* =========================================
+   INTRO / HALLO TATA
+========================================= */
+
+.intro-page {
+  min-height: 600px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  /*
+    Posisi tengah agak turun
+  */
+
+  padding-top: 95px;
+  padding-bottom: 45px;
+}
+
+.intro-page h2 {
+  margin-bottom: 17px;
+}
+
+.intro-page p {
+  max-width: 700px;
+
+  margin-bottom: 3px;
+}
+
+.intro-page button {
+  margin-top: 24px;
+}
+
+
+/* =========================================
+   GIFTS
+========================================= */
+
+.gifts-page {
+  min-height: 600px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+.gifts-page h1 {
+  margin-bottom: 10px;
+}
+
+.gifts-page > p {
+  margin-bottom: 26px;
+}
+
+.gift-grid {
+  width: 100%;
+  max-width: 780px;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 16px;
+
+  margin: 0 auto 20px;
+}
+
+.gift-card {
+  min-height: 105px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 15px;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.13);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.22s ease,
+    background 0.22s ease;
+}
+
+.gift-card:hover {
+  transform: translateY(-4px);
+
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.gift-card span {
+  display: block;
+
+  font-size: 28px;
+
+  margin-bottom: 7px;
+}
+
+.gift-card p {
+  font-size: 14px;
+
+  line-height: 1.3;
+}
+
+
+/* =========================================
+   CONTENT PAGES
+========================================= */
+
+.content-page {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+.content-page > h2 {
+  margin-bottom: 12px;
+}
+
+.content-page > button {
+  margin-top: 22px;
+}
+
+
+/* =========================================
+   MEMORIES
+========================================= */
+
+.memory-gallery {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 24px;
+
+  margin: 25px 0;
+}
+
+.memory-gallery img {
+  width: 42%;
+  max-width: 390px;
+
+  max-height: 350px;
+
+  object-fit: contain;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 12px 28px rgba(46, 38, 120, 0.18);
+}
+
+
+/* =========================================
+   FLOWER
+========================================= */
+
+.flower {
+  font-size: 48px !important;
+
+  margin: 22px 0;
+
+  line-height: 1.3;
+}
+
+.content-page > p {
+  max-width: 700px;
+}
+
+
+/* =========================================
+   LETTER
+========================================= */
+
+.letter-card {
+  min-height: 600px;
+
+  /*
+    Isi letter diturunkan sedikit
+  */
+
+  padding-top: 78px;
+  padding-bottom: 48px;
+}
+
+.letter-card h2 {
+  margin-bottom: 22px;
+}
+
+.letter-card > p {
+  width: 100%;
+  max-width: 760px;
+
+  padding: 27px 34px;
+
+  margin-top: 8px;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.11);
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  text-align: left;
+
+  line-height: 1.8;
+}
+
+.letter-card > button {
+  margin-top: 22px;
+}
+
+
+/* =========================================
+   SONG
+   DUA YOUTUBE ATAS - BAWAH
+========================================= */
+
+.song-list {
+  width: 100%;
+  max-width: 720px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  /*
+    INI JARAK ANTAR YOUTUBE
+  */
+
+  gap: 34px;
+
+  margin-top: 25px;
+  margin-bottom: 2px;
+}
+
+.song-list iframe {
+  display: block;
+
+  width: 100%;
+  max-width: 680px;
+
+  height: 300px;
+
+  border: 0;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 10px 25px rgba(46, 38, 120, 0.18);
+}
+
+
+/* =========================================
+   SURPRISE
+========================================= */
+
+.surprise-box {
+  width: 100%;
+  max-width: 600px;
+
+  margin-top: 25px;
+
+  padding: 32px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 16px;
+
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.surprise-box span {
+  font-size: 58px;
+}
+
+.surprise-box p {
+  max-width: 520px;
+}
+
+
+/* =========================================
+   SURPRISE IMAGE
+   EFEK "TUING"
+========================================= */
+
+.surprise-image {
+  display: block;
+
+  width: 280px;
+  max-width: 85%;
+
+  max-height: 350px;
+
+  object-fit: contain;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 12px 30px rgba(46, 38, 120, 0.22);
+
+  animation: surpriseTuing 0.7s ease-out both;
+}
+
+@keyframes surpriseTuing {
+  0% {
+    opacity: 0;
+    transform: scale(0.45);
+  }
+
+  45% {
+    opacity: 1;
+    transform: scale(1.12);
+  }
+
+  70% {
+    transform: scale(0.94);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* =========================================
+   FOOD
+========================================= */
+
+.food-grid {
+  width: 100%;
+  max-width: 720px;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 16px;
+
+  margin-top: 22px;
+}
+
+.food-card {
+  padding: 15px;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.food-card:hover {
+  transform: translateY(-4px);
+
+  background: rgba(255, 255, 255, 0.21);
+}
+
+
+/*
+   FOTO MAKANAN DIBUAT KECIL.
+   BUKAN SEGEDE KARTU.
+*/
+
+.food-card img {
+  display: block;
+
+  width: 105px;
+  height: 105px;
+
+  margin: 0 auto 10px;
+
+  object-fit: cover;
+
+  border-radius: 15px;
+}
+
+.food-card p {
+  font-size: 14px;
+
+  line-height: 1.3;
+}
+
+
+/* food selected */
+
+.food-result {
+  width: 100%;
+  max-width: 620px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 16px;
+
+  margin-top: 22px;
+}
+
+.food-result img {
+  width: 220px;
+  height: 220px;
+
+  object-fit: cover;
+
+  border-radius: 18px;
+}
+
+.food-result p {
+  max-width: 580px;
+}
+
+
+/* =========================================
+   WISH
+========================================= */
+
+.wish-page {
+  min-height: 600px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+.wish-page > h2 {
+  margin-bottom: 15px;
+}
+
+.wish-page > p {
+  width: 100%;
+  max-width: 680px;
+}
+
+
+/* wish password */
+
+.wish-input {
+  display: block;
+
+  width: 360px;
+  max-width: 75%;
+
+  height: 44px;
+
+  margin: 24px auto 0;
+
+  padding: 10px 16px;
+
+  border-radius: 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  outline: none;
+
+  background: rgba(255, 255, 255, 0.82);
+
+  color: #4c477e;
+
+  text-align: center;
+
+  font-size: 15px;
+}
+
+.wish-input::placeholder {
+  color: rgba(80, 75, 120, 0.6);
+}
+
+.wish-buttons {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 14px;
+}
+
+
+/* textarea */
+
+.wish-textarea {
+  display: block;
+
+  width: 520px;
+  max-width: 90%;
+
+  min-height: 150px;
+
+  margin: 20px auto 0;
+
+  padding: 15px 17px;
+
+  border-radius: 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  outline: none;
+
+  resize: vertical;
+
+  background: rgba(255, 255, 255, 0.16);
+
+  color: white;
+
+  font-family: inherit;
+
+  font-size: 15px;
+}
+
+.wish-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.wish-list {
+  width: 100%;
+  max-width: 650px;
+
+  margin-top: 20px;
+}
+
+.wish-item {
+  padding: 11px 15px;
+
+  margin-bottom: 9px;
+
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  text-align: left;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   QUIZ
+========================================= */
+
+.quiz-page {
+  min-height: 600px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+.quiz-page > h2 {
+  margin-bottom: 14px;
+}
+
+.quiz-page > p {
+  width: 100%;
+  max-width: 650px;
+}
+
+
+/* quiz password */
+
+.quiz-input {
+  display: block;
+
+  width: 360px;
+  max-width: 75%;
+
+  height: 44px;
+
+  margin: 24px auto 0;
+
+  padding: 10px 16px;
+
+  border-radius: 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  outline: none;
+
+  background: rgba(255, 255, 255, 0.82);
+
+  color: #4c477e;
+
+  text-align: center;
+
+  font-size: 15px;
+}
+
+.quiz-input::placeholder {
+  color: rgba(80, 75, 120, 0.6);
+}
+
+.quiz-buttons {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-top: 14px;
+}
+
+
+/* quiz questions */
+
+.quiz-number {
+  margin-bottom: 8px;
+
+  opacity: 0.8;
+}
+
+.quiz-page h3 {
+  width: 100%;
+  max-width: 700px;
+
+  margin: 12px auto 22px;
+}
+
+.quiz-options {
+  width: 100%;
+  max-width: 650px;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 12px;
+
+  margin: 0 auto;
+}
+
+.quiz-options button {
+  min-height: 48px;
+
+  width: 100%;
+}
+
+
+/* =========================================
+   RETURN BUTTON
+========================================= */
+
+.content-page > button,
+.gifts-page > button,
+.food-result > button {
+  min-width: 120px;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 850px) {
+  .container {
+    padding: 22px;
+  }
+
+  .page {
+    max-width: 900px;
+
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .gift-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .song-list {
+    max-width: 650px;
+  }
+
+  .song-list iframe {
+    max-width: 620px;
+  }
+
+  .astronaut {
+    left: 4%;
+  }
+
+  .rocket {
+    right: 4%;
+  }
+
+  .planet {
+    right: 4%;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .container {
+    padding: 12px;
+  }
+
+  .page {
+    min-height: 650px;
+
+    padding: 35px 18px;
+
+    border-radius: 23px;
+  }
+
+  h1 {
+    font-size: 29px;
+  }
+
+  h2 {
+    font-size: 23px;
+  }
+
+  h3 {
+    font-size: 19px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+
+  /* decorations */
+
+  .astronaut {
+    top: 7%;
+    left: 4%;
+
+    font-size: 30px;
+  }
+
+  .rocket {
+    top: 13%;
+    right: 4%;
+
+    font-size: 28px;
+  }
+
+  .planet {
+    right: 5%;
+    bottom: 7%;
+
+    font-size: 34px;
+  }
+
+  .shooting-star {
+    top: 19%;
+
+    width: 70px;
+  }
+
+
+  /* home */
+
+  .home-page {
+    min-height: 650px;
+
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+
+  .home-page h1 {
+    margin-bottom: 15px;
+  }
+
+  .typing-text {
+    margin-bottom: 24px;
+  }
+
+  .button-group {
+    gap: 12px;
+  }
+
+
+  /* password */
+
+  .password-page {
+    min-height: 650px;
+
+    padding-top: 80px;
+    padding-bottom: 35px;
+  }
+
+  .password-page input,
+  .wish-input,
+  .quiz-input {
+    width: 300px;
+    max-width: 85%;
+  }
+
+
+  /* intro */
+
+  .intro-page {
+    min-height: 650px;
+
+    padding-top: 75px;
+    padding-bottom: 35px;
+  }
+
+
+  /* gifts */
+
+  .gifts-page {
+    min-height: 650px;
+  }
+
+  .gift-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 11px;
+  }
+
+  .gift-card {
+    min-height: 95px;
+
+    padding: 10px 7px;
+  }
+
+  .gift-card span {
+    font-size: 25px;
+  }
+
+  .gift-card p {
+    font-size: 12px;
+  }
+
+
+  /* memories */
+
+  .memory-gallery {
+    flex-direction: column;
+
+    gap: 15px;
+  }
+
+  .memory-gallery img {
+    width: 88%;
+
+    max-height: 300px;
+  }
+
+
+  /* flower */
+
+  .flower {
+    font-size: 40px !important;
+  }
+
+
+  /* letter */
+
+  .letter-card {
+    padding-top: 55px;
+    padding-bottom: 35px;
+  }
+
+  .letter-card > p {
+    padding: 20px 17px;
+
+    font-size: 14px;
+
+    line-height: 1.75;
+  }
+
+
+  /* song */
+
+  .song-list {
+    gap: 22px;
+
+    margin-top: 20px;
+  }
+
+  .song-list iframe {
+    width: 100%;
+
+    height: 220px;
+  }
+
+
+  /* surprise */
+
+  .surprise-box {
+    padding: 25px 18px;
+  }
+
+  .surprise-box span {
+    font-size: 52px;
+  }
+
+
+  /* food */
+
+  .food-grid {
+    gap: 11px;
+  }
+
+  .food-card {
+    padding: 10px;
+  }
+
+  .food-card img {
+    width: 88px;
+    height: 88px;
+  }
+
+  .food-card p {
+    font-size: 12px;
+  }
+
+  .food-result img {
+    width: 190px;
+    height: 190px;
+  }
+
+
+  /* wish */
+
+  .wish-textarea {
+    width: 100%;
+
+    max-width: 100%;
+  }
+
+
+  /* quiz */
+
+  .quiz-options {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* buttons */
+
+  button {
+    padding: 10px 20px;
+
+    font-size: 13px;
+  }
+}
+
+/* =========================================
+   SMOOTH PAGE TRANSITION
+========================================= */
+
+.page {
+  animation: pageEnter 2s ease both;
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =========================================
+   SMOOTH BUTTON
+========================================= */
+
+button {
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease,
+    opacity 0.25s ease;
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+
+/* =========================================
+   SMOOTH GIFT / FOOD CARD
+========================================= */
+
+.gift-card,
+.food-card {
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.gift-card:active,
+.food-card:active {
+  transform: scale(0.97);
+}
+
+
+/* =========================================
+   SMOOTH IMAGES
+========================================= */
+
+.memory-gallery img,
+.food-result img {
+  transition:
+    transform 0.35s ease,
+    opacity 0.35s ease;
+}
+
+.memory-gallery img:hover,
+.food-result img:hover {
+  transform: scale(1.02);
+}
+
+
+/* =========================================
+   SMOOTH INPUT
+========================================= */
+
+input,
+textarea {
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+input:focus,
+textarea:focus {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 5px 18px rgba(46, 38, 120, 0.12);
+}
