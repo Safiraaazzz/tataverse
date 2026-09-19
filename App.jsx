@@ -1,5 +1,11 @@
 import { useState } from "react"
 import "./App.css"
+import cakeImage from "./cake.jpeg"
+import tataImage from "./Tata.jpeg"
+import bolaUbiImage from "./bola ubi.jpeg"
+import iceCreamImage from "./ice cream.jpeg"
+import greenTeaImage from "./green tea.jpeg"
+import nutribusImage from "./Nutribus.jpeg"
 
 function App() {
   const [page, setPage] = useState("home")
@@ -398,7 +404,7 @@ function App() {
               <>
                 <img
                   key="cake"
-                  src="/cake.jpeg"
+                  src={cakeImage}
                   alt="this is cake online for tata"
                   className="surprise-image"
                 />
@@ -413,7 +419,7 @@ function App() {
               <>
                 <img
                   key="tata"
-                  src="/tata.jpeg"
+                  src={tataImage}
                   alt="Tata"
                   className="surprise-image"
                 />
@@ -450,7 +456,7 @@ function App() {
                   className="food-card"
                   onClick={() => setSelectedFood("bolaubi")}
                 >
-                  <img src="/bolaubi.jpeg" alt="bola ubi" />
+                  <img src={bolaUbiImage} alt="bola ubi" />
                   <p>bola ubi</p>
                 </div>
 
@@ -458,7 +464,7 @@ function App() {
                   className="food-card"
                   onClick={() => setSelectedFood("icecream")}
                 >
-                  <img src="/icecream.jpeg" alt="ice cream kantin" />
+                  <img src={iceCreamImage} alt="ice cream kantin" />
                   <p>ice cream kantin</p>
                 </div>
 
@@ -466,7 +472,7 @@ function App() {
                   className="food-card"
                   onClick={() => setSelectedFood("greentea")}
                 >
-                  <img src="/greentea.jpeg" alt="NuGreentea" />
+                  <img src={greenTeaImage} alt="NuGreentea" />
                   <p>NuGreentea</p>
                 </div>
 
@@ -474,7 +480,7 @@ function App() {
                   className="food-card"
                   onClick={() => setSelectedFood("nutriboost")}
                 >
-                  <img src="/nutriboost.jpeg" alt="NutriBoost" />
+                  <img src={nutribusImage} alt="NutriBoost" />
                   <p>nutriboost</p>
                 </div>
               </div>
@@ -483,7 +489,7 @@ function App() {
             <div className="food-result">
               {selectedFood === "bolaubi" && (
                 <>
-                  <img src="/bolaubi.jpeg" alt="bola ubi" />
+                  <img src={bolaUbiImage} alt="bola ubi" />
 
                   <p>
                     sebenernya garagara bola ubi bikin kita bisa main waktu
@@ -494,7 +500,7 @@ function App() {
 
               {selectedFood === "icecream" && (
                 <>
-                  <img src="/icecream.jpeg" alt="ice cream kantin" />
+                  <img src={iceCreamImage} alt="ice cream kantin" />
 
                   <p>ice cream kantin pas belajar malem juga enak,ya ga ta?🍦😄</p>
                 </>
@@ -502,7 +508,7 @@ function App() {
 
               {selectedFood === "greentea" && (
                 <>
-                  <img src="/greentea.jpeg" alt="NuGreentea" />
+                  <img src={greenTeaImage} alt="NuGreentea" />
 
                   <p>
                     inget banget tata pernah ngasih aku nugreentea waktu
@@ -513,7 +519,7 @@ function App() {
 
               {selectedFood === "nutriboost" && (
                 <>
-                  <img src="/nutriboost.jpeg" alt="NutriBoost" />
+                  <img src={nutribusImage} alt="NutriBoost" />
 
                   <p>
                     inget tata waktu itu suka beli ini rasa jeruk, padahal asem jirss🤙🏻
